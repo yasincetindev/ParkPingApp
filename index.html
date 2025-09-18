@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ParkPing - Support</title>
+    <title>ParkPing - Destek</title>
     <style>
         * {
             margin: 0;
@@ -195,12 +195,90 @@
             border-top: 1px solid rgba(138, 43, 226, 0.2);
         }
         
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer h3 {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff, #e6d8ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin: 30px 0;
+        }
+        
+        .contact-item {
+            padding: 20px;
+            background: rgba(45, 27, 105, 0.3);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(138, 43, 226, 0.2);
+        }
+        
+        .contact-item a {
+            color: #9370DB;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .contact-item a:hover {
+            color: #8A2BE2;
+        }
+        
+        .legal-links {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(138, 43, 226, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .legal-links a {
+            color: #9370DB;
+            text-decoration: none;
+            font-size: 0.95em;
+            padding: 8px 16px;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .legal-links a:hover {
+            color: #ffffff;
+            background: rgba(138, 43, 226, 0.2);
+            border-color: #8A2BE2;
+        }
+        
+        .privacy-btn {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(147, 112, 219, 0.2));
+            border: 2px solid rgba(138, 43, 226, 0.4);
+        }
+        
+        .privacy-btn:hover {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.3), rgba(147, 112, 219, 0.3));
+            border-color: #8A2BE2;
+            transform: translateY(-2px);
+        }
+        
         @media (max-width: 768px) {
             .container { padding: 10px; }
             .header { padding: 40px 20px; }
             .header h1 { font-size: 2.5em; }
             .content { padding: 30px 20px; }
             .app-features { grid-template-columns: 1fr; }
+            .legal-links { flex-direction: column; gap: 10px; }
         }
     </style>
 </head>
@@ -293,9 +371,29 @@
             </div>
             
             <div class="footer">
-                <h3>ParkPing Destek</h3>
-                <p>E-posta: yasincetin.dev@gmail.com</p>
-                <p>© 2024 ParkPing. Tüm hakları saklıdır.</p>
+                <div class="footer-content">
+                    <h3>ParkPing Destek</h3>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <strong>📧 E-posta</strong><br>
+                            <a href="mailto:yasincetin.dev@gmail.com">yasincetin.dev@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>📱 App Store</strong><br>
+                            <a href="#">ParkPing İndir</a>
+                        </div>
+                    </div>
+                    
+                    <div class="legal-links">
+                        <p style="margin-bottom: 15px; opacity: 0.8; width: 100%;">
+                            © 2024 ParkPing. Tüm hakları saklıdır.
+                        </p>
+                        <a href="/Privacy/index.html" class="privacy-btn">🔒 Gizlilik Politikası</a>
+                        <a href="#">Kullanım Koşulları</a>
+                        <a href="#">Destek</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
