@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ParkPing - Destek</title>
+
+    <!-- Favicon ve app icons -->
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="shortcut icon" href="icon.png">
+    <link rel="apple-touch-icon" href="icon.png">
+    <meta name="theme-color" content="#8A2BE2">
     <style>
         * {
             margin: 0;
@@ -60,6 +66,18 @@
             background: linear-gradient(135deg, #ffffff, #e6d8ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .app-logo {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(138, 43, 226, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.2);
         }
         
         .content {
@@ -341,7 +359,10 @@
     <div class="container">
         <div class="main-card glass-card">
             <div class="header" style="position: relative;">
-                <h1>🅿️ ParkPing</h1>
+                <h1>
+                    <img src="icon.png" alt="ParkPing Logo" class="app-logo">
+                    ParkPing
+                </h1>
                 <p>Araç park lokasyonlarınızı kaydedin, harita üzerinde görüntüleyin</p>
             </div>
             
