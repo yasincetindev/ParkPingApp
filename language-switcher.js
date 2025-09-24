@@ -86,9 +86,16 @@ class LanguageSwitcher {
         // Title
         document.title = t.pageTitle;
 
-        // Header
+        // Header - Logo ile birlikte
         const appName = document.querySelector('.header h1');
-        if (appName) appName.textContent = `🅿️ ${t.appName}`;
+        if (appName) {
+            const logo = appName.querySelector('.app-logo');
+            if (logo) {
+                appName.innerHTML = `<img src="icon.png" alt="ParkPing Logo" class="app-logo">${t.appName}`;
+            } else {
+                appName.textContent = `🅿️ ${t.appName}`;
+            }
+        }
 
         const tagline = document.querySelector('.header p');
         if (tagline) tagline.textContent = t.tagline;
@@ -196,9 +203,16 @@ class LanguageSwitcher {
         // Title
         document.title = t.pageTitle;
 
-        // Header
+        // Header - Logo ile birlikte
         const headerTitle = document.querySelector('.header h1');
-        if (headerTitle) headerTitle.innerHTML = t.headerTitle;
+        if (headerTitle) {
+            const logo = headerTitle.querySelector('.app-logo');
+            if (logo) {
+                headerTitle.innerHTML = `<img src="../icon.png" alt="ParkPing Logo" class="app-logo">${t.headerTitle}`;
+            } else {
+                headerTitle.innerHTML = t.headerTitle;
+            }
+        }
 
         const headerSubtitle = document.querySelector('.header p');
         if (headerSubtitle) headerSubtitle.textContent = t.headerSubtitle;
